@@ -1,6 +1,6 @@
 <?php
 
-namespace Engine\Core\Datebase;
+namespace Engine\Core\Database;
 
 use \PDO;
 
@@ -11,20 +11,22 @@ class Connection
     /**
      *
      */
-    public function __construct() {
+    public function __construct()
+        {
             $this->connect();
         }
 
     /**
      * @return $this
      */
-    private function connect() {
+    private function connect()
+        {
             $config = [
-                'host'      => '',
-                'db_name'   => '',
-                'username'  => '',
-                'password'  => '',
-                'charset'   => '',
+                'host'      => 'localhost',
+                'db_name'   => 'test_pdo',
+                'username'  => 'root',
+                'password'  => 'root',
+                'charset'   => 'utf8',
             ];
 
             $dsn = 'mysql:host='.$config['host'].';dbname='.$config['db_name'].';charset='.$config['charset'];

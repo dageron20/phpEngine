@@ -2,8 +2,8 @@
 
 namespace Engine\Service\Database;
 
+use Engine\Core\Database\Connection;
 use Engine\Service\AbstractProvider;
-use Engine\Core\Datebase\Connection;
 
 class Provider extends AbstractProvider
 {

@@ -2,12 +2,17 @@
 
 namespace Engine;
 
+use Engine\DI\DI;
+
 class Cms
 {
     /**
      * @var DI
      */
     private $di;
+
+
+    public $router;
 
     /**'
      * Cms constructor.
@@ -16,13 +21,17 @@ class Cms
     public function __construct($di)
     {
         $this->di = $di;
+        $this->router = $this->di->get('router');
     }
 
     /**
      * Run cms
      */
-    public function run() {
-        $db = $this->di->get('test2');
-        print_r($db);
+    public function run()
+    {
+        $this->router->add('home', '/', 'HomeController:index');
+        $this->router->add('product', '/product/(id)', 'ProductController:index');
+        print_r($this->di);
+
     }
 }
