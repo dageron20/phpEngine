@@ -1,0 +1,20 @@
+{
+    "name": "den-k/php",
+    "autoload": {
+        "psr-4": {
+            "DenK\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Denis Kirilyuk"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Engine\\": "engine",
+            "Engine\\DI\\": "engine/DI"
+        }
+    }
+}
